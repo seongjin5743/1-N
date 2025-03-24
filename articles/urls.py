@@ -4,6 +4,7 @@ from . import views
 app_name = 'articles'
 
 urlpatterns = [
+    # Article
     # Create
     path('create/', views.create, name='create'),
 
@@ -15,5 +16,13 @@ urlpatterns = [
     path('<int:id>/update/', views.update, name='update'),
 
     # Delete
-    path('<int:id>/delete/', views.delete, name='delete')
+    path('<int:id>/delete/', views.delete, name='delete'),
+
+    # Comment
+    # Create
+    path('<int:article_id>/comments/create/', views.comment_create, name='comment_create'),
+
+    # Delete
+    path('<int:article_id>/commnets/<int:id>/delete', views.comment_delete, name='comment_delete'),
+
 ]
