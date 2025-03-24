@@ -10,8 +10,8 @@ urlpatterns = [
     # Read
     path('', views.index, name='index'),
     path('<int:id>/', views.detail, name='detail'),
-    
-    # Update
 
+    # Update
+    path('<int:id>/update/', views.update, name='update'),
     # Delete
 ]

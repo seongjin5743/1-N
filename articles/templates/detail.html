@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
 
 {% block body %}
-<h1>{{article.title}}</h1>
-<p>{{article.content}}</p>
-<p>{{article.created_at}}</p>
-<p>{{article.update_at}}</p>
+    <h1>{{article.title}}</h1>
+    <p>{{article.content}}</p>
+    <p>{{article.created_at}}</p>
+    <p>{{article.update_at}}</p>
 
+    <a href="{% url 'articles:update' article.id %}">UPDATE</a>
 {% endblock %}
