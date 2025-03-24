@@ -7,4 +7,5 @@
     <p>{{article.update_at}}</p>
 
     <a href="{% url 'articles:update' article.id %}">UPDATE</a>
+    <a href="{% url 'articles:delete' article.id %}">DELETE</a>
 {% endblock %}
