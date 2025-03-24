@@ -6,4 +6,6 @@ class Article(models.Model):
     created_at =  models.DateTimeField(auto_now=False, auto_now_add=True)
     update_at = models.DateTimeField(auto_now=True, auto_now_add=False)
 
-# class Comment(models.Model):
+class Comment(models.Model):
+    content = models.TextField()
+    article = models.ForeignKey(Article, on_delete=models.CASCADE)

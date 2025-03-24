@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block body %}
+    <a href="{% url 'articles:create' %}">CREATE</a>
     {% for article in articles %}
         <h1>{{article.title}}</h1>
         <a href="{% url 'articles:detail' article.id %}">DETAIL</a>
