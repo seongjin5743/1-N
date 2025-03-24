@@ -18,6 +18,7 @@
     </form>
 
     <hr>
+    
     {% for comment in article.comment_set.all %}
         <li>{{comment.content}}</li>
         <a href="{% url 'articles:comment_delete' article.id comment.id %}">DELETE</a>

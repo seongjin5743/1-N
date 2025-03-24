@@ -23,6 +23,6 @@ urlpatterns = [
     path('<int:article_id>/comments/create/', views.comment_create, name='comment_create'),
 
     # Delete
-    path('<int:article_id>/commnets/<int:id>/delete', views.comment_delete, name='comment_delete'),
+    path('<int:article_id>/commnets/<int:id>/delete/', views.comment_delete, name='comment_delete'),
 
 ]
